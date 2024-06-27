@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boot-5</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-6 bg-white m-auto">
+                <h2 class="text-center pt-3"></h2>
+                
+    <!-- Form start -->
+                <form class="needs-validation" novalidate action="#">
+                    <div class="form-group row align-items-center mb-3">
+                        <label for="firstName" class="col-3 col-form-label">First Name</label>
+                        <div class="col-9">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                <input type="text" class="form-control" id="firstName" placeholder="First Name" />
+                            </div>
+                            <div class="invalid-feedback">
+                                Please supply your first name.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="form-group row align-items-center mb-3">
+                        <label for="lastname" class="col-3 col-form-label">Last Name</label>
+                        <div class="col-9">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                <input type="text" class="form-control" id="lastName" placeholder="Last Name" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row align-items-center mb-3">
+                        <label for="Email" class="col-3 col-form-label">Email</label>
+                        <div class="col-9">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                                <input type="text" class="form-control" id="Email" placeholder="Email" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row align-items-center mb-3">
+                        <label for="Phone" class="col-3 col-form-label">Phone</label>
+                        <div class="col-9">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa fa-phone"></i></span>
+                                <input type="text" class="form-control" id="Phone" placeholder="(845) 555-1212"" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row align-items-center mb-3">
+                        <label for="Address" class="col-3 col-form-label">Address</label>
+                        <div class="col-9">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa fa-map-marker"></i></span>
+                                <input type="text" class="form-control" id="Address" placeholder="Address" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row align-items-center mb-3">
+                        <label for="City" class="col-3 col-form-label">City</label>
+                        <div class="col-9">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa fa-home"></i></span>
+                                <input type="text" class="form-control" id="City" placeholder="City" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row align-items-center mb-3">
+                        <label for="state" class="col-3 col-form-label">State</label>
+                        <div class="col-9">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa fa-map"></i></span>
+                                <select class="form-select form-control" id="state" required>
+                                    <option value="">Please select your state</option>
+                                    <option value="NY">New York</option>
+                                    <option value="CA">California</option>
+                                    <option value="TX">Texas</option>
+                                    <!-- Add more states as needed -->
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select your state.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row align-items-center mb-3">
+                        <label class="col-3 col-form-label"><h6>Do you have hosting</h6></label>
+                        <div class="col-9">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="hosting" id="hostingYes" value="yes" required>
+                                <label class="form-check-label" for="hostingYes">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="hosting" id="hostingNo" value="no" required>
+                                <label class="form-check-label" for="hostingNo">No</label>
+                            </div>
+                            <div class="invalid-feedback">
+                                Please select an option.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row align-items-center mb-3">
+                        <label for="projectDescription" class="col-3 col-form-label"><h6>Project Description</h6></label>
+                        <div class="col-9">
+                            <textarea class="form-control" id="projectDescription" rows="4" placeholder="Project Description" required></textarea>
+                            <div class="invalid-feedback">
+                                Please provide a project description.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-send bg-warning text-white"">
+                                <i class="fa fa-paper-plane"></i> Send
+                            </button>
+                        </div>
+                    </div>
+                    
+                </form>
+    <!-- Form close -->
+            </div>
+        </div>
+    </div>
+    
+    
+
+    
+
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

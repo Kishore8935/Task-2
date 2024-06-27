@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Form</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        .invalid-feedback {
+            display: none;
+        }
+        .was-validated .form-control:invalid ~ .invalid-feedback {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-6 bg-white m-auto p-4 border rounded">
+                <form id="myForm" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name" required>
+                        <div class="invalid-feedback">
+                            Name is required
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email" required>
+                        <div class="invalid-feedback">
+                            Email is required
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        <div class="invalid-feedback">
+                            Password is required
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="hobbies" class="form-label">Hobbies</label>
+                        <select class="form-control" id="hobbies" required>
+                            <option value="">Choose...</option>
+                            <option value="reading">Reading</option>
+                            <option value="sports">Sports</option>
+                            <option value="traveling">Traveling</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a hobby
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-danger btn-lg btn-block">
+                             Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
